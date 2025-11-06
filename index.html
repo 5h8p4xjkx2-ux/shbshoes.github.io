@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>پرداخت فروشگاه SHB Shoes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>صفحه پرداخت — SHB Shoes</title>
+  <style>
+    body { font-family: "Tahoma", Arial, sans-serif; background:#f7f7f7; margin:0; padding:0; }
+    .card { max-width:500px; margin:80px auto; background:#fff; padding:24px; box-shadow:0 6px 18px rgba(0,0,0,0.06); border-radius:8px; text-align:center; }
+    h1 { margin:0 0 8px 0; font-size:20px; }
+    p { color:#555; margin:6px 0 18px 0; }
+    .price { font-size:20px; font-weight:600; margin-bottom:16px; }
+    .pay-btn { display:inline-block; padding:12px 28px; border-radius:6px; border:none; background:#0066cc; color:#fff; font-size:16px; cursor:pointer; text-decoration:none; }
+    .small { color:#888; font-size:13px; margin-top:14px; }
+  </style>
 </head>
-<body style="font-family:sans-serif; text-align:center; margin-top:60px;">
-  <h2>💳 پرداخت خرید کارت باشگاه و شرکت در قرعه‌کشی پراید</h2>
-  <p>مبلغ: ۲۹۹,۰۰۰ تومان</p>
-  <a href="https://www.zarinpal.com/pg/StartPay/def3bebd-7532-4cc2-8418-12b615a5f052" 
-     style="background:#28a745; color:#fff; padding:15px 25px; text-decoration:none; border-radius:5px; font-size:18px;">
-     پرداخت امن با زرین‌پال
-  </a>
+<body>
+  <div class="card">
+    <h1>پرداخت سفارش — SHB Shoes</h1>
+    <p>مبلغ سفارش را با زدن دکمه‌ی زیر پرداخت کنید.</p>
+
+    <div class="price">۵۰٬۰۰۰ ریال</div>
+
+    <!-- فرم پرداخت زرین‌پال -->
+    <form method="POST" action="https://www.zarinpal.com/pg/StartPay/def3bebd-7532-4cc2-8418-12b615a5f052">
+      <!-- مقدار مبلغ را به ریال اینجا قرار بده -->
+      <input type="hidden" name="Amount" value="50000">
+      <input type="hidden" name="Description" value="خرید از فروشگاه SHB Shoes">
+      <button type="submit" class="pay-btn">پرداخت و ادامه</button>
+    </form>
+
+    <div class="small">امن و ساده — منتقل می‌شوید به صفحه‌ی زرین‌پال.</div>
+  </div>
 </body>
 </html>
